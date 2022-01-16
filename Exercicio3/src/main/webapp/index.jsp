@@ -1,4 +1,6 @@
 
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -51,10 +53,32 @@
 	<%="Fim" %>
 	
 	
+	<br>
+	<br>
+	<br>
+								
+	<%-- ________________________________________________________________________________________--%>						
+ 	
+	<%-- Exercicio 3 --%>
 		
-	
+		<%!
+			Calendar seg = Calendar.getInstance();
+		%>
 		
-		
+		<%! 
+			int segundos(){
+			return seg.get(Calendar.SECOND);
+			}
+		%>
+		 
+		<%
+			if(segundos() % 2 == 0){
+				out.println("Os segundos atualmente é par!");
+			}
+			else {
+				out.println("Os segundos atualmente é ímpar!");
+			}
+		%>
 	
 </body>
 </html>
